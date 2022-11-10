@@ -22,10 +22,10 @@ const people = [
   ]; 
   
   const oldEnough = people.filter(person => person.age >= 21)
-  console.log(oldEnough)
+  console.log('oldEnough:', oldEnough)
 
   const paul = people.filter(person => person.name == 'Paul')[0]
-  console.log(paul)
+  console.log('Filter Paul: ', paul)
   
   // Complex Filtering
   const students = [
@@ -64,6 +64,9 @@ const people = [
   const has5yearsExp = skill => skill.yrsExperience >= 5
   const hasStrongSkills = student=> student.skills.filter(has5yearsExp).length > 0;
   const candidates = students.filter(hasStrongSkills)
-console.log(candidates)
+// console.log(candidates)
 
-  
+
+console.log('-----')  
+
+candidates.map(s => s.name).forEach((oneByOne => console.log(oneByOne, 'has more than 5 years of experience')))
