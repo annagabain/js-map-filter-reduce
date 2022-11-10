@@ -71,3 +71,10 @@ let experienceByProfession = teamMembers.reduce((acc, curr) => {
 
 }, {})
 console.log(experienceByProfession)
+
+const allYearsOfExperience = teamMembers.reduce((currentTotal, teamMember)=>{
+  return teamMember.yrsExperience + currentTotal
+
+}, 0)
+
+console.log('All years together:', allYearsOfExperience)
